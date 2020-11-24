@@ -17,6 +17,11 @@ class ArticlesController < ApplicationController
 
   # POST /articles
   def create
+    puts "$$$$$$$$$$$$$$$$$$$$$$$$$"
+    puts params
+    puts current_user
+    puts "$$$$$$$$$$$$$$$$$$$$$$$$$"
+
     @article = Article.new(article_params)
 
     if @article.save

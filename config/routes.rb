@@ -3,10 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :users, only: %w[show]
-    resources :articles
   end
-
-  post 'api/article', to: 'articles#create'
 
   devise_for :users,
     defaults: { format: :json },
